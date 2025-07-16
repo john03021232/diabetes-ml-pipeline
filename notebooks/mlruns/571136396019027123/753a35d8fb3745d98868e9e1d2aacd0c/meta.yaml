@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/john030212/Desktop/diabetes-ml-pipeline/notebooks/mlruns/571136396019027123/753a35d8fb3745d98868e9e1d2aacd0c/artifacts
+end_time: 1752704919848
+entry_point_name: ''
+experiment_id: '571136396019027123'
+lifecycle_stage: active
+run_id: 753a35d8fb3745d98868e9e1d2aacd0c
+run_name: bemused-toad-774
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752704915947
+status: 4
+tags: []
+user_id: john030212

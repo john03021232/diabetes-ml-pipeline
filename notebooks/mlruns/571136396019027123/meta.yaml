@@ -1,0 +1,6 @@
+artifact_location: file:///Users/john030212/Desktop/diabetes-ml-pipeline/notebooks/mlruns/571136396019027123
+creation_time: 1752703678299
+experiment_id: '571136396019027123'
+last_update_time: 1752703678299
+lifecycle_stage: active
+name: diabetes-prediction

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/john030212/Desktop/diabetes-ml-pipeline/notebooks/mlruns/571136396019027123/ae5198ceb2ef44c9a03979e5ad2f8181/artifacts
+end_time: 1752704017203
+entry_point_name: ''
+experiment_id: '571136396019027123'
+lifecycle_stage: active
+run_id: ae5198ceb2ef44c9a03979e5ad2f8181
+run_name: gregarious-ox-447
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752704017196
+status: 4
+tags: []
+user_id: john030212

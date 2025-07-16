@@ -5,10 +5,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import roc_auc_score
 import pandas as pd
-from src.data_preprocessing import load_and_preprocess
+from data_preprocessing import load_and_preprocess
 
 def objective(trial):
-    X_train, X_test, y_train, y_test, _ = load_and_preprocess("data/diabetes.csv")
+    X_train, X_test, y_train, y_test, _ = load_and_preprocess("../data/diabetes.csv")
 
     params = {
         "n_estimators": trial.suggest_int("n_estimators", 50, 200),

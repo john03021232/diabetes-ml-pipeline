@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/john030212/Desktop/diabetes-ml-pipeline/notebooks/mlruns/571136396019027123/17aede03cf764d8aaaaca942a6c518c2/artifacts
+end_time: 1752705321571
+entry_point_name: ''
+experiment_id: '571136396019027123'
+lifecycle_stage: active
+run_id: 17aede03cf764d8aaaaca942a6c518c2
+run_name: useful-sponge-801
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752705317406
+status: 3
+tags: []
+user_id: john030212

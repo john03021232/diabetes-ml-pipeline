@@ -1,5 +1,6 @@
 # src/train_model.py
 
+import os
 import time
 import joblib
 import mlflow
@@ -23,6 +24,11 @@ def train(X_train, X_test, y_train, y_test, params, save_path="models/model.pkl"
         mlflow.log_params(params)
         mlflow.log_metrics({"accuracy": acc, "auc": auc, "training_time": end - start})
         mlflow.sklearn.log_model(model, "model")
+
+        
+
+        # Ensure the models/ directory exists
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
 
         joblib.dump(model, save_path)
         print(f"Model saved to {save_path}")

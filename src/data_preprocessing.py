@@ -7,8 +7,8 @@ from sklearn.preprocessing import MinMaxScaler
 def load_and_preprocess(path):
     df = pd.read_csv(path)
     
-    X = df.drop('Outcome', axis=1)
-    y = df['Outcome']
+    X = df.drop('Diabetic', axis=1)
+    y = df['Diabetic']
 
     scaler = MinMaxScaler()
     X_scaled = scaler.fit_transform(X)
