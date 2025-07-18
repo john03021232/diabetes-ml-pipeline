@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/john030212/Desktop/diabetes-ml-pipeline/notebooks/mlruns/571136396019027123/f4c35faeaff74d95959d97cbd89ceef2/artifacts
+end_time: 1752708489611
+entry_point_name: ''
+experiment_id: '571136396019027123'
+lifecycle_stage: active
+run_id: f4c35faeaff74d95959d97cbd89ceef2
+run_name: charming-sloth-564
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752708485659
+status: 3
+tags: []
+user_id: john030212

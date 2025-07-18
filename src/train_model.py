@@ -1,4 +1,4 @@
-# src/train_model.py
+# # src/train_model.py
 
 import os
 import time
@@ -8,10 +8,13 @@ import mlflow.sklearn
 from sklearn.metrics import accuracy_score, roc_auc_score
 from sklearn.ensemble import GradientBoostingClassifier
 
-def train(X_train, X_test, y_train, y_test, params, save_path="models/model.pkl"):
+def train(X_train, X_test, y_train, y_test, params, save_path="../models/model.pkl"):
     mlflow.set_experiment("diabetes-prediction")
 
-    with mlflow.start_run():
+    try:
+        # Ensure the directory exists only once
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+
         start = time.time()
         model = GradientBoostingClassifier(**params)
         model.fit(X_train, y_train)
@@ -25,11 +28,11 @@ def train(X_train, X_test, y_train, y_test, params, save_path="models/model.pkl"
         mlflow.log_metrics({"accuracy": acc, "auc": auc, "training_time": end - start})
         mlflow.sklearn.log_model(model, "model")
 
-        
-
-        # Ensure the models/ directory exists
-        os.makedirs(os.path.dirname(save_path), exist_ok=True)
-
         joblib.dump(model, save_path)
         print(f"Model saved to {save_path}")
+
         return model, acc, auc
+
+    except Exception as e:
+        print(f"Error during training or saving model: {e}")
+        raise

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/john030212/Desktop/diabetes-ml-pipeline/notebooks/mlruns/571136396019027123/9ddb5d240e0c4fb6a38f5015aeedb07c/artifacts
+end_time: 1752708290425
+entry_point_name: ''
+experiment_id: '571136396019027123'
+lifecycle_stage: active
+run_id: 9ddb5d240e0c4fb6a38f5015aeedb07c
+run_name: dashing-lark-182
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752708286397
+status: 3
+tags: []
+user_id: john030212

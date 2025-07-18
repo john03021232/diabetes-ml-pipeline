@@ -1,0 +1,10 @@
+artifact_location: file:///Users/john030212/Desktop/diabetes-ml-pipeline/notebooks/mlruns/571136396019027123/models/m-d2880513f0ca4ad8a7e9f5f023801941/artifacts
+creation_timestamp: 1752820427682
+experiment_id: '571136396019027123'
+last_updated_timestamp: 1752820429264
+model_id: m-d2880513f0ca4ad8a7e9f5f023801941
+model_type: null
+name: model
+source_run_id: 6312b786b302458b9832171da3d08dca
+status: 2
+status_message: null

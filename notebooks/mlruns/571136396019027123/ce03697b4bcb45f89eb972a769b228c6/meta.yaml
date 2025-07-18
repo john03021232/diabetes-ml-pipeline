@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/john030212/Desktop/diabetes-ml-pipeline/notebooks/mlruns/571136396019027123/ce03697b4bcb45f89eb972a769b228c6/artifacts
+end_time: 1752820427624
+entry_point_name: ''
+experiment_id: '571136396019027123'
+lifecycle_stage: active
+run_id: ce03697b4bcb45f89eb972a769b228c6
+run_name: bustling-sloth-946
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752820361205
+status: 3
+tags: []
+user_id: john030212

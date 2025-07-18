@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/john030212/Desktop/diabetes-ml-pipeline/notebooks/mlruns/571136396019027123/c0be3432e01743d889705eb1149d34af/artifacts
+end_time: 1752820166121
+entry_point_name: ''
+experiment_id: '571136396019027123'
+lifecycle_stage: active
+run_id: c0be3432e01743d889705eb1149d34af
+run_name: rare-skink-565
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752819656876
+status: 3
+tags: []
+user_id: john030212
