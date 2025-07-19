@@ -25,8 +25,6 @@ def batch_predict(model_path, scaler, input_path, output_path):
     preds_prob = model.predict_proba(X)[:, 1]
 
 
-    # Add predictions back to original dataframe (reload to keep non-feature cols)
-    #df_orig = pd.read_csv(input_path)
     # Add predictions to dataframe
     df['prediction'] = preds
     df['prediction_prob'] = preds_prob
