@@ -1,0 +1,11 @@
+feature,type,test,p_value,drift
+PatientID,numerical,KS-test,0.4925500848254617,False
+Pregnancies,numerical,KS-test,0.4925500848254617,False
+PlasmaGlucose,numerical,KS-test,0.9977908942219696,False
+DiastolicBloodPressure,numerical,KS-test,0.702385880150327,False
+TricepsThickness,numerical,KS-test,0.9396506004964184,False
+SerumInsulin,numerical,KS-test,0.13465853127175087,False
+BMI,numerical,KS-test,0.45711928100560795,False
+DiabetesPedigree,numerical,KS-test,0.7311339735083752,False
+Age,numerical,KS-test,0.8467189779335662,False
+Diabetic,numerical,KS-test,0.9999999999999986,False
