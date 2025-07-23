@@ -2,24 +2,9 @@
 
 This project demonstrates a complete modular ML pipeline for diabetes prediction using Optuna for hyperparameter tuning and MLflow for experiment tracking.
 
-## Structure
-
-├── data/ # Raw and preprocessed data
-├── models/ # Saved models
-├── outputs/ # Inference results
-├── notebooks/ # Jupyter notebooks
-├── src/ # Python scripts for each pipeline step
-│ ├── data_preprocessing.py 
-│ ├── train_model.py 
-│ ├── hpo_optuna.py 
-│ ├── model_registration.py 
-│ ├── batch_inference.py 
-| └── drift_detection.py 
-├── requirements.txt # Dependencies
-└── README.md
 
 
-### Steps to Run
+## Steps to Run
 Preprocess Data
 Run src/data_preprocessing.py 
 Cleans and prepares raw data.
