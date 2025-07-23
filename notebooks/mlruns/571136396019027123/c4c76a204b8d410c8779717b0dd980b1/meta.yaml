@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/john030212/Desktop/diabetes-ml-pipeline/notebooks/mlruns/571136396019027123/c4c76a204b8d410c8779717b0dd980b1/artifacts
+end_time: 1753293709995
+entry_point_name: ''
+experiment_id: '571136396019027123'
+lifecycle_stage: active
+run_id: c4c76a204b8d410c8779717b0dd980b1
+run_name: Final_Model_Registration
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753293708358
+status: 3
+tags: []
+user_id: john030212

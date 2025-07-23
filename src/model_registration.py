@@ -6,6 +6,7 @@ import joblib
 import os
 import time
 from sklearn.metrics import accuracy_score, roc_auc_score
+from mlflow.models.signature import infer_signature
 
 def register_model(model, X_test, y_test, params, save_path="models/final_model.pkl"):
     start_time = time.time()
@@ -34,7 +35,20 @@ def register_model(model, X_test, y_test, params, save_path="models/final_model.
             "training_time": train_time
         })
         mlflow.log_artifact(save_path)  # log .pkl file
-        mlflow.sklearn.log_model(model, "model")  # log model for registry view
+
+        # mlflow.sklearn.log_model(model, name = "model")  # log model for registry view
+
+        # Prepare model signature
+        input_example = X_test.iloc[:2] if hasattr(X_test, "iloc") else X_test[:2]
+        signature = infer_signature(X_test, model.predict(X_test))
+
+        mlflow.sklearn.log_model(
+            sk_model=model,
+            name="model",
+            input_example=input_example,
+            signature=signature
+        )
+
         print("Model registered to MLflow")
 
     return acc, auc

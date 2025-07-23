@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/john030212/Desktop/diabetes-ml-pipeline/notebooks/mlruns/571136396019027123/bc5ef1945f0a4667b8aa315ad235d809/artifacts
+end_time: 1753294050601
+entry_point_name: ''
+experiment_id: '571136396019027123'
+lifecycle_stage: active
+run_id: bc5ef1945f0a4667b8aa315ad235d809
+run_name: gifted-mink-554
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753294045919
+status: 3
+tags: []
+user_id: john030212

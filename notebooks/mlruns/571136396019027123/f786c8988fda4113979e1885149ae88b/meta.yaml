@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/john030212/Desktop/diabetes-ml-pipeline/notebooks/mlruns/571136396019027123/f786c8988fda4113979e1885149ae88b/artifacts
+end_time: 1753293708331
+entry_point_name: ''
+experiment_id: '571136396019027123'
+lifecycle_stage: active
+run_id: f786c8988fda4113979e1885149ae88b
+run_name: nervous-cow-352
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753293689291
+status: 3
+tags: []
+user_id: john030212
