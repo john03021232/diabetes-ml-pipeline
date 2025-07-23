@@ -44,24 +44,24 @@ Visualizes feature distributions with KDE plots.
 
 ## Screenshots
 
-/Users/john030212/Desktop/diabetes-ml-pipeline/images/1.png
+images/1.png
 
-/Users/john030212/Desktop/diabetes-ml-pipeline/images/2.png
+images/2.png
 
-/Users/john030212/Desktop/diabetes-ml-pipeline/images/2-1.png
+images/2-1.png
 
-/Users/john030212/Desktop/diabetes-ml-pipeline/images/3.png
+images/3.png
 
-/Users/john030212/Desktop/diabetes-ml-pipeline/images/4.png
+images/4.png
 
-/Users/john030212/Desktop/diabetes-ml-pipeline/images/5.png
+images/5.png
 
-/Users/john030212/Desktop/diabetes-ml-pipeline/images/6.png
+images/6.png
 
-/Users/john030212/Desktop/diabetes-ml-pipeline/images/61.png
+images/61.png
 
-/Users/john030212/Desktop/diabetes-ml-pipeline/images/62.png
+images/62.png
 
-/Users/john030212/Desktop/diabetes-ml-pipeline/images/63.png
+images/63.png
 
-/Users/john030212/Desktop/diabetes-ml-pipeline/images/64.png
+images/64.png
