@@ -41,3 +41,27 @@ Data Drift Detection
 Run src/drift_detection.py
 Performs manual drift detection using KS-test.
 Visualizes feature distributions with KDE plots.
+
+## Screenshots
+
+/Users/john030212/Desktop/diabetes-ml-pipeline/images/1.png
+
+/Users/john030212/Desktop/diabetes-ml-pipeline/images/2.png
+
+/Users/john030212/Desktop/diabetes-ml-pipeline/images/2-1.png
+
+/Users/john030212/Desktop/diabetes-ml-pipeline/images/3.png
+
+/Users/john030212/Desktop/diabetes-ml-pipeline/images/4.png
+
+/Users/john030212/Desktop/diabetes-ml-pipeline/images/5.png
+
+/Users/john030212/Desktop/diabetes-ml-pipeline/images/6.png
+
+/Users/john030212/Desktop/diabetes-ml-pipeline/images/61.png
+
+/Users/john030212/Desktop/diabetes-ml-pipeline/images/62.png
+
+/Users/john030212/Desktop/diabetes-ml-pipeline/images/63.png
+
+/Users/john030212/Desktop/diabetes-ml-pipeline/images/64.png
