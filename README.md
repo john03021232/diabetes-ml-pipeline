@@ -44,24 +44,30 @@ Visualizes feature distributions with KDE plots.
 
 ## Screenshots
 
-images/1.png
+## Data Pipeline Output
+![](images/1.png)
 
-images/2.png
+## Hyperparameter Tuning Output
+![](images/2.png)
 
-images/2-1.png
+![](images/2-1.png)
 
-images/3.png
+## Model Training Results
+![](images/3.png)
 
-images/4.png
+## Model Registration Output
+![](images/4.png)
 
-images/5.png
+## Batch Inference Results
+![](images/5.png)
 
-images/6.png
+## Data Drift Analysis
+![](images/6.png)
 
-images/61.png
+![](images/61.png)
 
-images/62.png
+![](images/62.png)
 
-images/63.png
+![](images/63.png)
 
-images/64.png
+![](images/64.png)
