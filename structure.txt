@@ -1,0 +1,990 @@
+.
+├── README.md
+├── data
+│   ├── diabetes.csv
+│   └── diabetes2.csv
+├── models
+│   ├── model.pkl
+│   └── scaler.pkl
+├── notebooks
+│   ├── drift_results
+│   │   ├── Age_drift.png
+│   │   ├── BMI_drift.png
+│   │   ├── DiabetesPedigree_drift.png
+│   │   ├── Diabetic_drift.png
+│   │   ├── DiastolicBloodPressure_drift.png
+│   │   ├── PatientID_drift.png
+│   │   ├── PlasmaGlucose_drift.png
+│   │   ├── Pregnancies_drift.png
+│   │   ├── SerumInsulin_drift.png
+│   │   ├── TricepsThickness_drift.png
+│   │   └── drift_summary.csv
+│   ├── mlruns
+│   │   ├── 0
+│   │   │   └── meta.yaml
+│   │   └── 571136396019027123
+│   │       ├── 1601f6f5373845d2803f3b0e8b6dbc8b
+│   │       │   ├── artifacts
+│   │       │   │   └── final_model.pkl
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-8703065c0bf549569c33ce5ecf840f1b
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── 17aede03cf764d8aaaaca942a6c518c2
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-25bdd834d51f4cb5bfdd317e02d891cb
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── 20cca559565e48ed81ae57290e2e1eae
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   ├── params
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── 4f183c151a204f4f99b92fd067c73856
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-75a0939b82b245aa9e04ef06884b99a1
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── 505866b37e19480bbaf532f46af55c64
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-56935a0310af4615a012c81fcd7995c8
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── 6312b786b302458b9832171da3d08dca
+│   │       │   ├── artifacts
+│   │       │   │   └── final_model.pkl
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-d2880513f0ca4ad8a7e9f5f023801941
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── 675d7a069ca74cedb16ccdf8afb6f167
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-00de4ba75c5049e78c8d1893a837e632
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── 753a35d8fb3745d98868e9e1d2aacd0c
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-09c2178a10564117afa12bb43b859491
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── 796a7a0ad2c045d59c60899babe80896
+│   │       │   ├── artifacts
+│   │       │   │   └── final_model.pkl
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-148cf11e4d8047ef9e7e0800628ed28f
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── 8995fd431a7e4b18b77c108ead5eeda9
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-5b565a33f9dc4027b1f1fc6a0cf506ef
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── 9587828600834989b48f5f5bb56fcfcc
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   ├── params
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── 96641a793c3c40e8bba6243ad41aa3a4
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-3caf80c1f9e045c9a1a5c779366052eb
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── 97d07af2ba174865bea5ff5e23eb5908
+│   │       │   ├── artifacts
+│   │       │   │   └── final_model.pkl
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-dd5aa8af2f574112ba420a62384b0f14
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── 9ddb5d240e0c4fb6a38f5015aeedb07c
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-ab0717097e6141dabf6edd7e3a0fa905
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── aa34b1d3a336430fa71b914ed50d7a43
+│   │       │   ├── artifacts
+│   │       │   │   └── final_model.pkl
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-9224484c0f754b29bdcf30dbfcd1b632
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── ae5198ceb2ef44c9a03979e5ad2f8181
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   ├── params
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── ba0a29b9707e4ee0ae99771f3a49c0b8
+│   │       │   ├── artifacts
+│   │       │   │   └── final_model.pkl
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-f3be43952ec04e6faef2eb89dcac31cc
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── bc5ef1945f0a4667b8aa315ad235d809
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-2a08d2ba3b5444d8b6a13f4027af7709
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── c0be3432e01743d889705eb1149d34af
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-3d8b9c3c7b6740bb8af5982117c3929e
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── c4c76a204b8d410c8779717b0dd980b1
+│   │       │   ├── artifacts
+│   │       │   │   └── final_model.pkl
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-028e6673a8214ae88bd8f0793b7b1eaf
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── ce03697b4bcb45f89eb972a769b228c6
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-92a1b35b417b41ebbf27e68fc9ad7d13
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── d059d74e591e484382f71a08567d246b
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-54b705228c3c4246872a402dc81d2556
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── eea46868b00e47cc80d458dfce90e4fc
+│   │       │   ├── artifacts
+│   │       │   │   └── final_model.pkl
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-088bea0ffde844f9b8eebd8c96f69eb2
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── f4c35faeaff74d95959d97cbd89ceef2
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-56250a81a919468ba549034b4b72d45e
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── f786c8988fda4113979e1885149ae88b
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-02bad7e5101d46579d7a66b9833a9e3b
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── fdb8a29171364359b20b6c418da6ba71
+│   │       │   ├── artifacts
+│   │       │   ├── meta.yaml
+│   │       │   ├── metrics
+│   │       │   │   ├── accuracy
+│   │       │   │   ├── auc
+│   │       │   │   └── training_time
+│   │       │   ├── outputs
+│   │       │   │   └── m-8d7393539ea34cb6a3b1865f62c95a84
+│   │       │   │       └── meta.yaml
+│   │       │   ├── params
+│   │       │   │   ├── learning_rate
+│   │       │   │   ├── max_depth
+│   │       │   │   └── n_estimators
+│   │       │   └── tags
+│   │       │       ├── mlflow.runName
+│   │       │       ├── mlflow.source.name
+│   │       │       ├── mlflow.source.type
+│   │       │       └── mlflow.user
+│   │       ├── meta.yaml
+│   │       └── models
+│   │           ├── m-00de4ba75c5049e78c8d1893a837e632
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-028e6673a8214ae88bd8f0793b7b1eaf
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-02bad7e5101d46579d7a66b9833a9e3b
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-088bea0ffde844f9b8eebd8c96f69eb2
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-09c2178a10564117afa12bb43b859491
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-148cf11e4d8047ef9e7e0800628ed28f
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-25bdd834d51f4cb5bfdd317e02d891cb
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-2a08d2ba3b5444d8b6a13f4027af7709
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-3caf80c1f9e045c9a1a5c779366052eb
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-3d8b9c3c7b6740bb8af5982117c3929e
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-54b705228c3c4246872a402dc81d2556
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-56250a81a919468ba549034b4b72d45e
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-56935a0310af4615a012c81fcd7995c8
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-5b565a33f9dc4027b1f1fc6a0cf506ef
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-75a0939b82b245aa9e04ef06884b99a1
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── input_example.json
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   ├── requirements.txt
+│   │           │   │   └── serving_input_example.json
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-8703065c0bf549569c33ce5ecf840f1b
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-8d7393539ea34cb6a3b1865f62c95a84
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-9224484c0f754b29bdcf30dbfcd1b632
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── input_example.json
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   ├── requirements.txt
+│   │           │   │   └── serving_input_example.json
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-92a1b35b417b41ebbf27e68fc9ad7d13
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-ab0717097e6141dabf6edd7e3a0fa905
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-d2880513f0ca4ad8a7e9f5f023801941
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           ├── m-dd5aa8af2f574112ba420a62384b0f14
+│   │           │   ├── artifacts
+│   │           │   │   ├── MLmodel
+│   │           │   │   ├── conda.yaml
+│   │           │   │   ├── model.pkl
+│   │           │   │   ├── python_env.yaml
+│   │           │   │   └── requirements.txt
+│   │           │   ├── meta.yaml
+│   │           │   ├── metrics
+│   │           │   │   ├── accuracy
+│   │           │   │   ├── auc
+│   │           │   │   └── training_time
+│   │           │   ├── params
+│   │           │   │   ├── learning_rate
+│   │           │   │   ├── max_depth
+│   │           │   │   └── n_estimators
+│   │           │   └── tags
+│   │           │       ├── mlflow.source.name
+│   │           │       ├── mlflow.source.type
+│   │           │       └── mlflow.user
+│   │           └── m-f3be43952ec04e6faef2eb89dcac31cc
+│   │               ├── artifacts
+│   │               │   ├── MLmodel
+│   │               │   ├── conda.yaml
+│   │               │   ├── model.pkl
+│   │               │   ├── python_env.yaml
+│   │               │   └── requirements.txt
+│   │               ├── meta.yaml
+│   │               ├── metrics
+│   │               │   ├── accuracy
+│   │               │   ├── auc
+│   │               │   └── training_time
+│   │               ├── params
+│   │               │   ├── learning_rate
+│   │               │   ├── max_depth
+│   │               │   └── n_estimators
+│   │               └── tags
+│   │                   ├── mlflow.source.name
+│   │                   ├── mlflow.source.type
+│   │                   └── mlflow.user
+│   ├── models
+│   │   ├── final_model.pkl
+│   │   └── model.pkl
+│   └── pipeline_demo.ipynb
+├── output
+│   └── predictions.csv
+├── requirements.txt
+├── src
+│   ├── __pycache__
+│   │   ├── batch_inference.cpython-312.pyc
+│   │   ├── data_preprocessing.cpython-312.pyc
+│   │   ├── drift_detection.cpython-312.pyc
+│   │   ├── hpo_optuna.cpython-312.pyc
+│   │   ├── model_registration.cpython-312.pyc
+│   │   └── train_model.cpython-312.pyc
+│   ├── batch_inference.py
+│   ├── data_preprocessing.py
+│   ├── drift_detection.py
+│   ├── hpo_optuna.py
+│   ├── model_registration.py
+│   └── train_model.py
+└── structure.txt
+
+304 directories, 684 files

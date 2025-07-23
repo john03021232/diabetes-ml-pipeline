@@ -1,4 +1,5 @@
 # src/drift_detection.py
+# To uses KS-test and KDE plots to detect data drift
 
 import pandas as pd
 import numpy as np

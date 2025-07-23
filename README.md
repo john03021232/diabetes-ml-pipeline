@@ -1,1 +1,58 @@
 # diabetes-ml-pipeline
+
+This project demonstrates a complete modular ML pipeline for diabetes prediction using Optuna for hyperparameter tuning and MLflow for experiment tracking.
+
+## Structure
+
+├── data/ # Raw and preprocessed data
+├── models/ # Saved models
+├── outputs/ # Inference results
+├── notebooks/ # Jupyter notebooks
+├── src/ # Python scripts for each pipeline step
+│ ├── data_preprocessing.py 
+│ ├── train_model.py 
+│ ├── hpo_optuna.py 
+│ ├── model_registration.py 
+│ ├── batch_inference.py 
+| └── drift_detection.py 
+├── requirements.txt # Dependencies
+└── README.md
+
+
+### Steps to Run
+Preprocess Data
+Run src/data_preprocessing.py 
+Cleans and prepares raw data.
+Outputs cleaned datasets for training/testing.
+
+
+Hyperparameter Tuning
+Run src/hpo_optuna.py
+Trains a Gradient Boosting Classifier.
+Logs model metrics (accuracy, AUC) to MLflow.
+Saves model as models/model.pkl.
+
+
+Train Final Model
+Run src/train_model.py 
+Uses Optuna to optimize hyperparameters.
+Logs all trials to MLflow.
+
+
+Register Model
+Run src/model_registration.py 
+Registers the final trained model to MLflow Model Registry.
+Saves final model to models/final_model.pkl.
+
+
+Batch Inference
+Run src/batch_inference.py 
+Loads final model and generates predictions for batch inputs.
+Outputs predictions to data/output_predictions.csv.
+
+
+(Optional)
+Data Drift Detection
+Run src/drift_detection.py
+Performs manual drift detection using KS-test.
+Visualizes feature distributions with KDE plots.

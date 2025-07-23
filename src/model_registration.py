@@ -1,4 +1,5 @@
 # src/model_registration.py
+# To log in MLflow.
 
 import mlflow
 import mlflow.sklearn

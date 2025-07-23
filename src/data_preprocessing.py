@@ -1,4 +1,5 @@
 # src/data_preprocessing.py
+# To clean and split the dataset.
 
 import pandas as pd
 from sklearn.model_selection import train_test_split

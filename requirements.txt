@@ -5,3 +5,6 @@ optuna
 mlflow
 joblib
 evidently
+numpy
+seaborn
+ipywidgets

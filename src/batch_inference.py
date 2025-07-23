@@ -1,4 +1,5 @@
 # src/batch_inference.py
+# To generate predictions
 
 import pandas as pd
 import joblib
